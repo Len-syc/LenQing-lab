@@ -1,7 +1,7 @@
 `An Agent Without a Plan Drifts Off Course`
 - Explicit plans keep long-running work visible and correctable.
 
-![[Pasted image 20261021174942.png]]
+![](image/Pasted%20image%2020261021174942.png)
 ---
 
 ## 问题
@@ -16,7 +16,7 @@ Agent 开始干活，改了 3 个文件，跑了个测试，发现 2 个失败�
 
 ## 解决方案
 
-![[Pasted image 20261021165823.png]]
+![](image/Pasted%20image%2020261021165823.png)
 
 S05 保留 S04 的工具分发、权限检查和 Hooks
 再加入 `todo_write` 与 reminder 计数器。
@@ -131,7 +131,7 @@ if in_progress_count > 1:
 | 规划能力      | 无                                 | 带状态的 TODO 列表 + reminder                   |
 | SYSTEM 提示 | 通用提示                              | 加入 "先计划再执行" 引导                            |
 | 循环        | 工具分发与 Hooks                       | 保留分发路径，加入 rounds_since_todo 和 reminder 注入 |
-![[Pasted image 20261021175330.png]]
+![](image/Pasted%20image%2020261021175330.png)
 
 
 ## 设计决策

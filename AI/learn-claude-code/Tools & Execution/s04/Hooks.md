@@ -29,20 +29,20 @@ and the hook likes the decorator in python
 
 ## The Solution
 
-![[Pasted image 20261020211153.png]]s03 的循环和权限逻辑完全保留。唯一的变动是把 `check_permission()` 从循环体内移到了 hook 上，循环不再直接调用任何检查函数，改为 `trigger_hooks("PreToolUse", block)`，由注册表决定跑什么。
+![](image/Pasted%20image%2020261020211153.png)s03 的循环和权限逻辑完全保留。唯一的变动是把 `check_permission()` 从循环体内移到了 hook 上，循环不再直接调用任何检查函数，改为 `trigger_hooks("PreToolUse", block)`，由注册表决定跑什么。
 这里也体现出了一个思维，那就是,Minimal agent loop
 
 ---
 
 Hook一共包含了四个事件
-![[Pasted image 20261020211957.png]]
+![](image/Pasted%20image%2020261020211957.png)
 由此可见，agent loop就只需要做最简单的循环的就可以了，我们只需把想做的东西放在hook，避免再次去修改核心函数
 如需扩展，通过 `register_hook()` 添加，循环只调用 `trigger_hooks()`
 
 ---
 ## Execution Flow
 
-![[Pasted image 20261020220025.png]]
+![](image/Pasted%20image%2020261020220025.png)
 
 ---
 ## How It Works
@@ -239,7 +239,7 @@ s04 >>
 
 
 ## Common mistakes
-![[Pasted image 20261020221508.png]]
+![](image/Pasted%20image%2020261020221508.png)
 -  UserPromptSubmit有个作用，那就是context injection，但目前的代码里是只有打印给用户看，没有上下文注入这个功能，但是是有的，比如：自动附带的目录、git 状态、日期等信息都是通过这个实现，用来补充模型不知道的环境信息。如果后续加入git状态等等的话，也就要把这些消息和user的消息拼在一起然后一起发给llm。
 	但又引发了一个问题，注入的消息重复，有2种solution，1.只注入第一次，并放入CLAUDE.md，动态信息放 system 里，每次请求现算。这些先不管
 

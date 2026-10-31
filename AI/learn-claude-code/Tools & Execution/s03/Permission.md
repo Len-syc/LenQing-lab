@@ -7,10 +7,10 @@
 
 **Three Requests, Three Routes**
 Permission is a router: safe calls run, risky calls ask, forbidden calls stop.
-![[Pasted image 20261018203135.png]]
+![](image/Pasted%20image%2020261018203135.png)
 ---
 ## Execution Flow
-![[Pasted image 20261018200836.png]]
+![](image/Pasted%20image%2020261018200836.png)
 
 
 ---
@@ -20,15 +20,15 @@ Permission is a router: safe calls run, risky calls ask, forbidden calls stop.
 	- Gate 3: user approval
 
 现在走一遍流程，一个Tool Request会走3个gate,当时Gate 1: hard deny的时候，deny，gate2的时候，如果是 allow rule--> allow,如果是 risk rule--> ask user
-	![[Pasted image 20261018203252.png]]
+	![](image/Pasted%20image%2020261018203252.png)
 ### Gate 1: hard deny
 forbidden root delete
-![[Pasted image 20261018202707.png]]
+![](image/Pasted%20image%2020261018202707.png)
 
 
 ### Gate 2: risk rule/allow rule
 allow rule：此时它match到了Gate2,然后又是allow rule 随后被allow，这一步是自动，不需要ask user
-![[Pasted image 20261018202345.png]]
+![](image/Pasted%20image%2020261018202345.png)
 
 
 
@@ -36,8 +36,8 @@ allow rule：此时它match到了Gate2,然后又是allow rule 随后被allow，�
 
 
 risk rule：此时它match到了Gate2,然后又是risk rule (可能local destructive command)，所以 ask user(Deleting files needs an explicit approval ticket.)
-	![[Pasted image 20261018202521.png]]
-	![[Pasted image 20261018202624.png]]
+	![](image/Pasted%20image%2020261018202521.png)
+	![](image/Pasted%20image%2020261018202624.png)
 
 
 
@@ -54,7 +54,7 @@ risk rule：此时它match到了Gate2,然后又是risk rule (可能local destruc
 
 
 ## Code
-![[Pasted image 20261018220913.png]]
+![](image/Pasted%20image%2020261018220913.png)
 ### Part Code
 #### gate 1：一张硬拒绝表，先查，命中就返回阻止信息。这张表使用简单字符串匹配来说明权限闸门的位置，不能视为完整的安全边界。
 

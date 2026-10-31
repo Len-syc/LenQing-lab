@@ -8,21 +8,21 @@ this is s01
 s01 的 Agent 只有一个 bash 工具。读文件要 `cat`，写文件要 `echo "..." > file.py`，改文件要 `sed`。
 
 模型想的是"读这个文件"，却要拼出 `cat path/to/file`。多了一层翻译，浪费 token，还容易拼错。
-![[Pasted image 20261018135405.png]]
+![](image/Pasted%20image%2020261018135405.png)
 
 
 ---
 
 ### s02
 
-![[Pasted image 20261018134954.png]]
+![](image/Pasted%20image%2020261018134954.png)
 this lesson is easy.we just need understand this map
 and
 this is the dispatch map
-![[Pasted image 20261018135059.png]]
+![](image/Pasted%20image%2020261018135059.png)
 
 what new than s01?
-![[Pasted image 20261018135156.png]]
+![](image/Pasted%20image%2020261018135156.png)
 
 
 
@@ -144,7 +144,7 @@ for block in tool_calls:
 
 ## 总结
 简单来说，就只多了这些代码
-![[Pasted image 20261018220849.png]]
+![](image/Pasted%20image%2020261018220849.png)
 ``` py
 # -- New in s02: tool definitions (one tool in s01, five in s02) --
 

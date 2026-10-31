@@ -2,8 +2,8 @@
 - One Loop Is All You Need
 - The smallest useful agent is a loop that calls the model, runs tools, and feeds results back.
 # Agent_loop
-![[Pasted image 20261014232327.png]]
-![[Pasted image 20261015123941.png]]
+![](image/Pasted%20image%2020261014232327.png)
+![](image/Pasted%20image%2020261015123941.png)
 
 ---
 ## step1
@@ -112,7 +112,7 @@ def agent_loop(messages):
 这一段负责的是用户的input
 之后就把`agent_loop(history)`message[] 放进去
 
-![[Pasted image 20261015211706.png]]
+![](image/Pasted%20image%2020261015211706.png)
 
 
 之后就是这一段，在想看懂这一段之前，要先了解a/的api格式。
@@ -166,7 +166,7 @@ for block in response_content:
 ---
 完整流程：
 
-![[Pasted image 20261015223415.png]]
+![](image/Pasted%20image%2020261015223415.png)
 
 
 
@@ -267,7 +267,7 @@ a/的优点，
    → 做完更新状态
 ```
 ai拥有自主权，决策权，harness只负责给它环境
-简单来说就是：![[Pasted image 20261016215638.png]]
+简单来说就是：![](image/Pasted%20image%2020261016215638.png)
 
 
 
@@ -286,8 +286,8 @@ ai拥有自主权，决策权，harness只负责给它环境
 ---
 
 ## 完整流程
-![[Pasted image 20261015191859.png]]![[Pasted image 20261015191912.png]]![[Pasted image 20261015191927.png]]
-![[Pasted image 20261016215003.png]]
+![](image/Pasted%20image%2020261015191859.png)![](image/Pasted%20image%2020261015191912.png)![](image/Pasted%20image%2020261015191927.png)
+![](image/Pasted%20image%2020261016215003.png)
 
 
 ### 数据流程：
